@@ -13,7 +13,7 @@ class ErrorScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('ページが見つかりませんでした'),
+            Text(error),
             ElevatedButton(
               onPressed: () => context.go('/'),
               child: const Text('トップページ'),
