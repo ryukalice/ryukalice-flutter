@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +16,12 @@ class _State extends State<HomeScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[],
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () => context.go('/error'),
+              child: const Text('エラーページ'),
+            ),
+          ],
         ),
       ),
     );
