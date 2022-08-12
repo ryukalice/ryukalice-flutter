@@ -25,6 +25,11 @@ class Menu extends StatelessWidget {
             title: const Text('トップページ'),
             onTap: () => context.go('/'),
           ),
+          ListTile(
+            leading: const Icon(Icons.error_outline),
+            title: const Text('存在しないページ'),
+            onTap: () => context.go('/error'),
+          )
         ],
       ),
     );
