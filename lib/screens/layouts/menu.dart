@@ -13,7 +13,7 @@ class Menu extends StatelessWidget {
           SizedBox(
             height: 80,
             child: DrawerHeader(
-              decoration: const BoxDecoration(color: Colors.black45),
+              decoration: const BoxDecoration(color: Colors.black54),
               child: Container(
                 alignment: Alignment.center,
                 child: const Text('メニュー', style: TextStyle(color: Colors.white, fontSize: 18)),
