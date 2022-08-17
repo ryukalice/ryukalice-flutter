@@ -19,6 +19,7 @@ class _State extends State<Layout> {
     return Scaffold(
       key: widget.key ?? _drawerKey,
       appBar: Header(title: widget.title),
+      extendBodyBehindAppBar: true,
       body: widget.body,
       endDrawer: const Menu(),
     );
