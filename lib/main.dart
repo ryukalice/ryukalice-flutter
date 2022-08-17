@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '/utils/routes.dart';
 
 void main() {
+  GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   runApp(const MyApp());
 }
 
