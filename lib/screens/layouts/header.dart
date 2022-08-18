@@ -16,7 +16,7 @@ class _State extends State<Header> {
   PreferredSizeWidget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: true,
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.black.withOpacity(0.2),
       foregroundColor: Colors.white,
       elevation: 0.0,
       title: Text(widget.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
