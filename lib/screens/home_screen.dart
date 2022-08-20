@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import '/screens/layout.dart';
+import '/components/home/main_visual.dart';
+import '/components/home/profile.dart';
+import '/components/home/skills.dart';
+import '/components/home/histories.dart';
+import '/components/home/writing.dart';
+import '/components/home/contact.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +20,14 @@ class _State extends State<HomeScreen> {
     return Layout(
       body: SingleChildScrollView(
         child: Column(
-          children: const <Widget>[],
+          children: const <Widget>[
+            MainVisual(),
+            Profile(),
+            Skills(),
+            Histories(),
+            Writing(),
+            Contact(),
+          ],
         ),
       ),
     );
