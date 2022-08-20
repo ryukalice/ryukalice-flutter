@@ -13,11 +13,8 @@ class _State extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Layout(
       body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[],
-          ),
+        child: Column(
+          children: const <Widget>[],
         ),
       ),
     );
