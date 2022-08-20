@@ -12,7 +12,6 @@ class _State extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Layout(
-      title: 'トップページ',
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
