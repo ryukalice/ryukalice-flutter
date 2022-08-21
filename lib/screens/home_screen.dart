@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import '/screens/layout.dart';
+import '/components/home/main_visual.dart';
+import '/components/home/profile.dart';
+import '/components/home/skills.dart';
+import '/components/home/histories.dart';
+import '/components/home/writing.dart';
+import '/components/home/contact.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,11 +18,16 @@ class _State extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Layout(
-      title: 'トップページ',
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[],
+          children: const <Widget>[
+            MainVisual(),
+            Profile(),
+            Skills(),
+            Histories(),
+            Writing(),
+            Contact(),
+          ],
         ),
       ),
     );
