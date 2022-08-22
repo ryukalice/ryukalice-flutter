@@ -5,6 +5,6 @@ class MainVisual extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('MainVisual');
+    return Image.asset('assets/home/alice.png');
   }
 }
