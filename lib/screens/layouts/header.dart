@@ -19,7 +19,14 @@ class _State extends State<Header> {
       backgroundColor: Colors.black.withOpacity(0.2),
       foregroundColor: Colors.white,
       elevation: 0.0,
-      title: Text(widget.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+      title: Text(
+        widget.title,
+        style: const TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 2
+        ),
+      ),
     );
   }
 }
