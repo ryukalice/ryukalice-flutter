@@ -31,9 +31,23 @@ class MainVisual extends StatelessWidget {
                   'Microsoft Azure, Heroku, Vercel, AWS\n'
                   'C, TRON, C++, C++Builder, Delphi, Java',
                   textAlign: TextAlign.right,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    letterSpacing: 1.5,
+                    height: 2
+                  ),
                 ),
                 SizedBox(height: 100),
-                Text('Ryukalice', textAlign: TextAlign.right),
+                Text(
+                  'Ryukalice',
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2,
+                  ),
+                ),
               ],
             ),
           ),
