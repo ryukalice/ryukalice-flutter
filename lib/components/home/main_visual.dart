@@ -9,10 +9,14 @@ class MainVisual extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/home/alice.png'),
+              image: const AssetImage('assets/home/alice.png'),
               fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.white.withOpacity(0.5),
+                BlendMode.dstATop,
+              ),
             ),
           ),
           child: const Text(
