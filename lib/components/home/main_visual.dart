@@ -19,12 +19,17 @@ class MainVisual extends StatelessWidget {
               ),
             ),
           ),
-          child: const Text(
-            'Ruby, Ruby on Rails, Python, Django\n'
-            'Flutter, PHP, WordPress, CakePHP, Laravel\n'
-            'JavaScript, React.js, Next.js, Vue.js, React Native\n'
-            'Microsoft Azure, Heroku, Vercel, AWS\n'
-            'C, TRON, C++, C++Builder, Delphi, Java',
+          child: Column(
+            children: const [
+              Text(
+                'Ruby, Ruby on Rails, Python, Django\n'
+                'Flutter, PHP, WordPress, CakePHP, Laravel\n'
+                'JavaScript, React.js, Next.js, Vue.js, React Native\n'
+                'Microsoft Azure, Heroku, Vercel, AWS\n'
+                'C, TRON, C++, C++Builder, Delphi, Java',
+              ),
+              Text('Ryukalice'),
+            ],
           ),
         ),
       ],
