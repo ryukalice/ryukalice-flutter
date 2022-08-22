@@ -11,6 +11,7 @@ class MainVisual extends StatelessWidget {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/home/alice.png'),
+              fit: BoxFit.cover,
             ),
           ),
           child: const Text(
