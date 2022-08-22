@@ -5,6 +5,23 @@ class MainVisual extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset('assets/home/alice.png');
+    return Stack(
+      children: [
+        Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/home/alice.png'),
+            ),
+          ),
+          child: const Text(
+            'Ruby, Ruby on Rails, Python, Django\n'
+            'Flutter, PHP, WordPress, CakePHP, Laravel\n'
+            'JavaScript, React.js, Next.js, Vue.js, React Native\n'
+            'Microsoft Azure, Heroku, Vercel, AWS\n'
+            'C, TRON, C++, C++Builder, Delphi, Java',
+          ),
+        ),
+      ],
+    );
   }
 }
