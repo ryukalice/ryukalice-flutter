@@ -8,6 +8,7 @@ class MainVisual extends StatelessWidget {
     return Stack(
       children: [
         Container(
+          width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/home/alice.png'),
