@@ -28,6 +28,7 @@ class MainVisual extends StatelessWidget {
                 'Microsoft Azure, Heroku, Vercel, AWS\n'
                 'C, TRON, C++, C++Builder, Delphi, Java',
               ),
+              SizedBox(height: 100),
               Text('Ryukalice'),
             ],
           ),
