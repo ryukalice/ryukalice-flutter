@@ -22,6 +22,7 @@ class MainVisual extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 120, right: 30, bottom: 50),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: const [
                 Text(
                   'Ruby, Ruby on Rails, Python, Django\n'
@@ -29,9 +30,10 @@ class MainVisual extends StatelessWidget {
                   'JavaScript, React.js, Next.js, Vue.js, React Native\n'
                   'Microsoft Azure, Heroku, Vercel, AWS\n'
                   'C, TRON, C++, C++Builder, Delphi, Java',
+                  textAlign: TextAlign.right,
                 ),
                 SizedBox(height: 100),
-                Text('Ryukalice'),
+                Text('Ryukalice', textAlign: TextAlign.right),
               ],
             ),
           ),
