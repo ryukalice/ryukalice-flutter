@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -49,6 +51,7 @@ class _State extends State<Profile> {
                     color: _hover ? Colors.orange : Colors.grey,
                     decoration: TextDecoration.underline
                   ),
+                  recognizer: TapGestureRecognizer()..onTap = () => context.go('/blog'),
                   onEnter: (_) => setState(() => _hover = true),
                   onExit: (_) => setState(() => _hover = false),
                 ),
