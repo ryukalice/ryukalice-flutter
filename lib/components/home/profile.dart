@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'profile/cat_image.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -55,7 +56,19 @@ class _State extends State<Profile> {
                   onEnter: (_) => setState(() => _hover = true),
                   onExit: (_) => setState(() => _hover = false),
                 ),
-                TextSpan(text: 'を書いています。', style: _bodyStyle),
+                TextSpan(text: 'からお願いします。', style: _bodyStyle),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 50),
+            child: Row(
+              children: const [
+                CatImage(src: 'assets/home/alice.png'),
+                SizedBox(width: 30),
+                CatImage(src: 'assets/home/alice.png'),
+                SizedBox(width: 30),
+                CatImage(src: 'assets/home/alice.png'),
               ],
             ),
           ),
