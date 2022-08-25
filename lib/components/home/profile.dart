@@ -22,6 +22,8 @@ class _State extends State<Profile> {
 
   final _bodyStyle = const TextStyle(letterSpacing: 1.5);
 
+  var _hover = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,11 +43,14 @@ class _State extends State<Profile> {
                     '副業で個人事業主としてシステム開発の仕事や、開発者教育の仕事をしています。',
                   style: _bodyStyle
                 ),
-                const TextSpan(
+                TextSpan(
                   text: 'ブログ',
                   style: TextStyle(
-                    decoration: TextDecoration.underline,
+                    color: _hover ? Colors.orange : Colors.grey,
+                    decoration: TextDecoration.underline
                   ),
+                  onEnter: (_) => setState(() => _hover = true),
+                  onExit: (_) => setState(() => _hover = false),
                 ),
                 TextSpan(text: 'を書いています。', style: _bodyStyle),
               ],
