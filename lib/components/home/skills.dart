@@ -1,4 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
 
 class Skills extends StatefulWidget {
   const Skills({Key? key}) : super(key: key);
@@ -19,6 +22,23 @@ class _State extends State<Skills> {
     letterSpacing: 2,
     fontWeight: FontWeight.bold,
   );
+
+  final List _hover = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+
+  _launchURL(url) => html.window.open(url, 'new tab');
+
+  InlineSpan textLink(String title, String src, int index) {
+    return TextSpan(
+      text: title,
+      style: TextStyle(
+        color: _hover[index] ? Colors.orange : Colors.grey,
+        decoration: TextDecoration.underline
+      ),
+      recognizer: TapGestureRecognizer()..onTap = () => _launchURL(src),
+      onEnter: (_) => setState(() => _hover[index] = true),
+      onExit: (_) => setState(() => _hover[index] = false),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,13 +77,13 @@ class _State extends State<Skills> {
                     const Text('フロントエンド', textAlign: TextAlign.left),
                     const SizedBox(height: 20),
                     RichText(
-                      text: const TextSpan(
+                      text: TextSpan(
                         children: [
-                          TextSpan(text: '技術スタックの中心として'),
-                          TextSpan(text: 'React.js'),
-                          TextSpan(text: 'と'),
-                          TextSpan(text: 'Next.js'),
-                          TextSpan(text: 'を修めています。本 web サイトは Next.js, TypeScript, styled-components 等を用いたアプリケーションです。'),
+                          const TextSpan(text: '技術スタックの中心として'),
+                          textLink('React.js', 'https://reactjs.org/', 0),
+                          const TextSpan(text: 'と'),
+                          textLink('Next.js', 'https://nextjs.org/', 1),
+                          const TextSpan(text: 'を修めています。本 web サイトは Next.js, TypeScript, styled-components 等を用いたアプリケーションです。'),
                         ],
                       ),
                     ),
@@ -76,19 +96,19 @@ class _State extends State<Skills> {
                     const Text('バックエンド', textAlign: TextAlign.left),
                     const SizedBox(height: 20),
                     RichText(
-                      text: const TextSpan(
+                      text: TextSpan(
                         children: [
-                          TextSpan(text: '最も愛用しているのは'),
-                          TextSpan(text: 'Ruby on Rails'),
-                          TextSpan(text: 'です。'),
-                          TextSpan(text: 'Rails Girls Kitakyushu'),
-                          TextSpan(text: 'では夫婦でオーガナイザーとコーチ代表を行ったり、'),
-                          TextSpan(text: 'Rails Girls Fukuoka'),
-                          TextSpan(text: 'でコーチを担当したり等といったコミュニティへの参加も積極的に行っています。'),
-                          TextSpan(text: 'RubyKaigi'),
-                          TextSpan(text: 'や'),
-                          TextSpan(text: 'RubyWorld Conference'),
-                          TextSpan(text: '等のイベントにも足を運んでいます。'),
+                          const TextSpan(text: '最も愛用しているのは'),
+                          textLink('Ruby on Rails', 'https://rubyonrails.org/', 2),
+                          const TextSpan(text: 'です。'),
+                          textLink('Rails Girls Kitakyushu', 'http://railsgirls.com/kitakyushu.html', 3),
+                          const TextSpan(text: 'では夫婦でオーガナイザーとコーチ代表を行ったり、'),
+                          textLink('Rails Girls Fukuoka', 'http://railsgirls.com/fukuoka.html', 4),
+                          const TextSpan(text: 'でコーチを担当したり等といったコミュニティへの参加も積極的に行っています。'),
+                          textLink('RubyKaigi', 'https://rubykaigi.org/', 5),
+                          const TextSpan(text: 'や'),
+                          textLink('RubyWorld Conference', 'https://2022.rubyworld-conf.org/ja/', 6),
+                          const TextSpan(text: '等のイベントにも足を運んでいます。'),
                         ],
                       ),
                     ),
@@ -101,11 +121,11 @@ class _State extends State<Skills> {
                     const Text('モバイル', textAlign: TextAlign.left),
                     const SizedBox(height: 20),
                     RichText(
-                      text: const TextSpan(
+                      text: TextSpan(
                         children: [
-                          TextSpan(text: '学生向けのサービス等といったメインターゲットがスマホユーザーの web アプリケーション開発経験が豊富なため、モバイルファーストのコーディングや UI/UX 構築を得意としています。また、'),
-                          TextSpan(text: 'React Native'),
-                          TextSpan(text: 'によるネイティブアプリケーションの開発経験もあります。'),
+                          const TextSpan(text: '学生向けのサービス等といったメインターゲットがスマホユーザーの web アプリケーション開発経験が豊富なため、モバイルファーストのコーディングや UI/UX 構築を得意としています。また、'),
+                          textLink('React Native', 'https://reactnative.dev/', 7),
+                          const TextSpan(text: 'によるネイティブアプリケーションの開発経験もあります。'),
                         ],
                       ),
                     ),
@@ -118,11 +138,11 @@ class _State extends State<Skills> {
                     const Text('テスト', textAlign: TextAlign.left),
                     const SizedBox(height: 20),
                     RichText(
-                      text: const TextSpan(
+                      text: TextSpan(
                         children: [
-                          TextSpan(text: 'アプリケーション開発はテスト駆動開発で行います。テスト駆動開発の文脈では、'),
-                          TextSpan(text: 'Selenium'),
-                          TextSpan(text: 'によるシステムテストのみを書くことが多く、それとは別にシステム保守の一環として適切なテストを適切な分量書くことを重視しています。また、多くの組織でテスティング文化を浸透させるためのサポートをしてきました。'),
+                          const TextSpan(text: 'アプリケーション開発はテスト駆動開発で行います。テスト駆動開発の文脈では、'),
+                          textLink('Selenium', 'https://www.selenium.dev/', 8),
+                          const TextSpan(text: 'によるシステムテストのみを書くことが多く、それとは別にシステム保守の一環として適切なテストを適切な分量書くことを重視しています。また、多くの組織でテスティング文化を浸透させるためのサポートをしてきました。'),
                         ],
                       ),
                     ),
@@ -135,14 +155,14 @@ class _State extends State<Skills> {
                     const Text('インフラ', textAlign: TextAlign.left),
                     const SizedBox(height: 20),
                     RichText(
-                      text: const TextSpan(
+                      text: TextSpan(
                         children: [
-                          TextSpan(text: 'Microsoft Azure'),
-                          TextSpan(text: 'と'),
-                          TextSpan(text: 'Heroku'),
-                          TextSpan(text: 'を愛用しています。本 web サイトでは'),
-                          TextSpan(text: 'Vercel'),
-                          TextSpan(text: 'を使用しています。また、組み込み系の通信アプリケーション開発の経験から、物理的な機器でネットワークを構築する業務の経験もあります。'),
+                          textLink('Microsoft Azure', 'https://azure.microsoft.com/', 9),
+                          const TextSpan(text: 'と'),
+                          textLink('Heroku', 'https://heroku.com/', 10),
+                          const TextSpan(text: 'を愛用しています。本 web サイトでは'),
+                          textLink('Vercel', 'https://vercel.com/', 11),
+                          const TextSpan(text: 'を使用しています。また、組み込み系の通信アプリケーション開発の経験から、物理的な機器でネットワークを構築する業務の経験もあります。'),
                         ],
                       ),
                     ),
@@ -168,15 +188,15 @@ class _State extends State<Skills> {
                     const Text('ドキュメンテーション', textAlign: TextAlign.left),
                     const SizedBox(height: 20),
                     RichText(
-                      text: const TextSpan(
+                      text: TextSpan(
                         children: [
-                          TextSpan(text: '我々は在宅によるリモート開発しか行いません。そのため、仕様や議論をテキストとしてログに残すこと、'),
-                          TextSpan(text: 'GitHub Issue'),
-                          TextSpan(text: 'や'),
-                          TextSpan(text: 'Redmine'),
-                          TextSpan(text: '等のタスクトラッキングシステムに残すこと、'),
-                          TextSpan(text: 'Wiki'),
-                          TextSpan(text: '等に文書として残すこと、自動テストをドキュメントとして機能させること等に強いこだわりを持っています。'),
+                          const TextSpan(text: '我々は在宅によるリモート開発しか行いません。そのため、仕様や議論をテキストとしてログに残すこと、'),
+                          textLink('GitHub Issue', 'https://docs.github.com/ja/issues/tracking-your-work-with-issues/about-issues', 12),
+                          const TextSpan(text: 'や'),
+                          textLink('Redmine', 'https://redmine.jp/', 13),
+                          const TextSpan(text: '等のタスクトラッキングシステムに残すこと、'),
+                          textLink('Wiki', 'https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages', 14),
+                          const TextSpan(text: '等に文書として残すこと、自動テストをドキュメントとして機能させること等に強いこだわりを持っています。'),
                         ],
                       ),
                     ),
