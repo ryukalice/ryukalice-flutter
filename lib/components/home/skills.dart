@@ -123,7 +123,10 @@ class _State extends State<Skills> {
                     RichText(
                       text: TextSpan(
                         children: [
-                          const TextSpan(text: '学生向けのサービス等といったメインターゲットがスマホユーザーの web アプリケーション開発経験が豊富なため、モバイルファーストのコーディングや UI/UX 構築を得意としています。また、'),
+                          const TextSpan(text:
+                            '学生向けのサービス等といったメインターゲットがスマホユーザーの web アプリケーション開発経験が豊富なため、'
+                            'モバイルファーストのコーディングや UI/UX 構築を得意としています。また、'
+                          ),
                           textLink('React Native', 'https://reactnative.dev/', 7),
                           const TextSpan(text: 'によるネイティブアプリケーションの開発経験もあります。'),
                         ],
@@ -142,7 +145,10 @@ class _State extends State<Skills> {
                         children: [
                           const TextSpan(text: 'アプリケーション開発はテスト駆動開発で行います。テスト駆動開発の文脈では、'),
                           textLink('Selenium', 'https://www.selenium.dev/', 8),
-                          const TextSpan(text: 'によるシステムテストのみを書くことが多く、それとは別にシステム保守の一環として適切なテストを適切な分量書くことを重視しています。また、多くの組織でテスティング文化を浸透させるためのサポートをしてきました。'),
+                          const TextSpan(text:
+                            'によるシステムテストのみを書くことが多く、それとは別にシステム保守の一環として適切なテストを適切な分量書くことを重視しています。'
+                            'また、多くの組織でテスティング文化を浸透させるためのサポートをしてきました。'
+                          ),
                         ],
                       ),
                     ),
