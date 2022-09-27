@@ -53,65 +53,98 @@ class _State extends State<Skills> {
               ),
               SizedBox(
                 child: Column(
-                  children: const [
-                    Text('フロントエンド', textAlign: TextAlign.left),
-                    SizedBox(height: 20),
-                    Text(
-                      '技術スタックの中心として React.js と Next.js を修めています。'
-                      '本 web サイトは Next.js, TypeScript, styled-components 等を用いたアプリケーションです。'
+                  children: [
+                    const Text('フロントエンド', textAlign: TextAlign.left),
+                    const SizedBox(height: 20),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(text: '技術スタックの中心として'),
+                          TextSpan(text: 'React.js'),
+                          TextSpan(text: 'と'),
+                          TextSpan(text: 'Next.js'),
+                          TextSpan(text: 'を修めています。本 web サイトは Next.js, TypeScript, styled-components 等を用いたアプリケーションです。'),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
               SizedBox(
                 child: Column(
-                  children: const [
-                    Text('バックエンド', textAlign: TextAlign.left),
-                    SizedBox(height: 20),
-                    Text(
-                      '最も愛用しているのは Ruby on Rails です。'
-                      'Rails Girls Kitakyushu では夫婦でオーガナイザーとコーチ代表を行ったり、'
-                      'Rails Girls Fukuoka でコーチを担当したり等といったコミュニティへの参加も積極的に行っています。'
-                      'RubyKaigi や RubyWorld Conference 等のイベントにも足を運んでいます。'
+                  children: [
+                    const Text('バックエンド', textAlign: TextAlign.left),
+                    const SizedBox(height: 20),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(text: '最も愛用しているのは'),
+                          TextSpan(text: 'Ruby on Rails'),
+                          TextSpan(text: 'です。'),
+                          TextSpan(text: 'Rails Girls Kitakyushu'),
+                          TextSpan(text: 'では夫婦でオーガナイザーとコーチ代表を行ったり、'),
+                          TextSpan(text: 'Rails Girls Fukuoka'),
+                          TextSpan(text: 'でコーチを担当したり等といったコミュニティへの参加も積極的に行っています。'),
+                          TextSpan(text: 'RubyKaigi'),
+                          TextSpan(text: 'や'),
+                          TextSpan(text: 'RubyWorld Conference'),
+                          TextSpan(text: '等のイベントにも足を運んでいます。'),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
               SizedBox(
                 child: Column(
-                  children: const [
-                    Text('モバイル', textAlign: TextAlign.left),
-                    SizedBox(height: 20),
-                    Text(
-                      '学生向けのサービス等といったメインターゲットがスマホユーザーの web アプリケーション開発経験が豊富なため、'
-                      'モバイルファーストのコーディングや UI/UX 構築を得意としています。'
-                      'また、 React Native によるネイティブアプリケーションの開発経験もあります。'
+                  children: [
+                    const Text('モバイル', textAlign: TextAlign.left),
+                    const SizedBox(height: 20),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(text: '学生向けのサービス等といったメインターゲットがスマホユーザーの web アプリケーション開発経験が豊富なため、モバイルファーストのコーディングや UI/UX 構築を得意としています。また、'),
+                          TextSpan(text: 'React Native'),
+                          TextSpan(text: 'によるネイティブアプリケーションの開発経験もあります。'),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
               SizedBox(
                 child: Column(
-                  children: const [
-                    Text('テスト', textAlign: TextAlign.left),
-                    SizedBox(height: 20),
-                    Text(
-                      'アプリケーション開発はテスト駆動開発で行います。'
-                      'テスト駆動開発の文脈では、 Selenium によるシステムテストのみを書くことが多く、それとは別にシステム保守の一環として適切なテストを適切な分量書くことを重視しています。'
-                      'また、多くの組織でテスティング文化を浸透させるためのサポートをしてきました。'
+                  children: [
+                    const Text('テスト', textAlign: TextAlign.left),
+                    const SizedBox(height: 20),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(text: 'アプリケーション開発はテスト駆動開発で行います。テスト駆動開発の文脈では、'),
+                          TextSpan(text: 'Selenium'),
+                          TextSpan(text: 'によるシステムテストのみを書くことが多く、それとは別にシステム保守の一環として適切なテストを適切な分量書くことを重視しています。また、多くの組織でテスティング文化を浸透させるためのサポートをしてきました。'),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
               SizedBox(
                 child: Column(
-                  children: const [
-                    Text('インフラ', textAlign: TextAlign.left),
-                    SizedBox(height: 20),
-                    Text(
-                      'Microsoft Azure と Heroku を愛用しています。'
-                      '本 web サイトでは Vercel を使用しています。'
-                      'また、組み込み系の通信アプリケーション開発の経験から、物理的な機器でネットワークを構築する業務の経験もあります。'
+                  children: [
+                    const Text('インフラ', textAlign: TextAlign.left),
+                    const SizedBox(height: 20),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(text: 'Microsoft Azure'),
+                          TextSpan(text: 'と'),
+                          TextSpan(text: 'Heroku'),
+                          TextSpan(text: 'を愛用しています。本 web サイトでは'),
+                          TextSpan(text: 'Vercel'),
+                          TextSpan(text: 'を使用しています。また、組み込み系の通信アプリケーション開発の経験から、物理的な機器でネットワークを構築する業務の経験もあります。'),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -131,13 +164,21 @@ class _State extends State<Skills> {
               ),
               SizedBox(
                 child: Column(
-                  children: const [
-                    Text('ドキュメンテーション', textAlign: TextAlign.left),
-                    SizedBox(height: 20),
-                    Text(
-                      '我々は在宅によるリモート開発しか行いません。そのため、仕様や議論をテキストとしてログに残すこと、'
-                      'GitHub Issue や Redmine 等のタスクトラッキングシステムに残すこと、 Wiki 等に文書として残すこと、'
-                      '自動テストをドキュメントとして機能させること等に強いこだわりを持っています。'
+                  children: [
+                    const Text('ドキュメンテーション', textAlign: TextAlign.left),
+                    const SizedBox(height: 20),
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(text: '我々は在宅によるリモート開発しか行いません。そのため、仕様や議論をテキストとしてログに残すこと、'),
+                          TextSpan(text: 'GitHub Issue'),
+                          TextSpan(text: 'や'),
+                          TextSpan(text: 'Redmine'),
+                          TextSpan(text: '等のタスクトラッキングシステムに残すこと、'),
+                          TextSpan(text: 'Wiki'),
+                          TextSpan(text: '等に文書として残すこと、自動テストをドキュメントとして機能させること等に強いこだわりを持っています。'),
+                        ],
+                      ),
                     ),
                   ],
                 ),
